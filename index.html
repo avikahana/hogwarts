@@ -97,7 +97,7 @@
       position:absolute;inset:0;display:block}
     .cb::before{content:'';position:absolute;inset:5px;border-radius:10px;
       border:1px solid rgba(255,255,255,.05);pointer-events:none}
-    .names{text-align:right;direction:rtl;flex-shrink:0}
+    .names{text-align:center;direction:rtl;flex-shrink:0}
     .he-b{font-size:36px;font-weight:700;color:var(--c2);line-height:1.2;display:block;text-align:center}
     .en-b{font-size:20px;color:rgba(255,255,255,.4);letter-spacing:.03em;text-align:center;display:block;
       display:block;margin-top:2px;direction:ltr;text-align:left}
@@ -105,13 +105,12 @@
       opacity:.3;margin:6px 0;flex-shrink:0}
     .role{font-size:20px;text-align:center;direction:rtl;
       color:rgba(232,224,208,.72);line-height:1.45;flex-shrink:0}
-    .brs{flex:1;overflow-y:auto;margin-top:5px;
-      display:flex;flex-direction:column;gap:2px;scrollbar-width:none}
+    .brs{flex:1;overflow-y:auto;margin-top:5px;scrollbar-width:none;display:flex;align-items:flex-start;justify-content:center}
     .brs::-webkit-scrollbar{display:none}
-    .br{font-size:18px;text-align:right;direction:rtl;
-      color:rgba(200,190,170,.65);line-height:1.3;
-      display:flex;gap:4px;justify-content:flex-end;align-items:baseline}
-    .bn{color:var(--c2);font-weight:700;font-size:17px;flex-shrink:0;opacity:.8}
+    .brtable{border-collapse:collapse;direction:rtl;width:calc(100% - 16px)}
+    .brtable td{border:none;padding:4px 6px;vertical-align:top;line-height:1.4}
+    .brtable .bn{color:var(--c2);font-weight:700;font-size:17px;white-space:nowrap;text-align:right;width:48px}
+    .brtable .bt{font-size:18px;color:rgba(200,190,170,.85);text-align:right;word-break:break-word}
     .bot{display:flex;align-items:center;justify-content:space-between;
       margin-top:5px;flex-shrink:0}
     .books{font-size:20px;color:rgba(255,255,255,.35);direction:rtl}
