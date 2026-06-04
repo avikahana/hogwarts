@@ -44,6 +44,8 @@
     .ci{width:100%;height:100%;position:relative;transform-style:preserve-3d;-webkit-transform-style:preserve-3d;
       transition:transform .52s cubic-bezier(.4,.1,.2,1)}
     .cs.flipped .ci{transform:rotateY(180deg);-webkit-transform:rotateY(180deg)}
+    .cs.flipped .cf{visibility:hidden}
+    .cs:not(.flipped) .cb{visibility:hidden}
     .cf,.cb{position:absolute;inset:0;border-radius:14px;
       backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:hidden}
     /* FRONT – photo faces up */
