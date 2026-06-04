@@ -98,12 +98,12 @@
     .cb::before{content:'';position:absolute;inset:5px;border-radius:10px;
       border:1px solid rgba(255,255,255,.05);pointer-events:none}
     .names{text-align:right;direction:rtl;flex-shrink:0}
-    .he-b{font-size:36px;font-weight:700;color:var(--c2);line-height:1.2;display:block}
-    .en-b{font-size:20px;color:rgba(255,255,255,.4);letter-spacing:.03em;
+    .he-b{font-size:36px;font-weight:700;color:var(--c2);line-height:1.2;display:block;text-align:center}
+    .en-b{font-size:20px;color:rgba(255,255,255,.4);letter-spacing:.03em;text-align:center;display:block;
       display:block;margin-top:2px;direction:ltr;text-align:left}
     .div{width:100%;height:1px;background:linear-gradient(90deg,transparent,var(--c2),transparent);
       opacity:.3;margin:6px 0;flex-shrink:0}
-    .role{font-size:20px;text-align:right;direction:rtl;
+    .role{font-size:20px;text-align:center;direction:rtl;
       color:rgba(232,224,208,.72);line-height:1.45;flex-shrink:0}
     .brs{flex:1;overflow-y:auto;margin-top:5px;
       display:flex;flex-direction:column;gap:2px;scrollbar-width:none}
@@ -390,7 +390,7 @@ function render(){
     const photoHTML=photo
       ?`<div class="photo"><img src="${photo}" alt="${en}" loading="lazy" style="object-position:${PHOTO_POS[en]||'50% 50%'}">`+'</div>'
       :`<div class="photo"><div class="photo-ph"><div class="ph-icon">${C.icon}</div><div class="ph-init">${en.split(' ').map(w=>w[0]).join('').slice(0,2)}</div></div></div>`;
-    const brHTML=bKeys.map(k=>`<div class="br"><span class="bn">ס'${k}</span><span>${bookRoles[k]}</span></div>`).join('');
+    const brHTML='<table class="brtable">'+bKeys.map(k=>`<tr><td class="bn">ס'${k}</td><td class="bt">${bookRoles[k]}</td></tr>`).join('')+'</table>';
     sc.innerHTML=`
       <div class="ci">
         <div class="cf">
